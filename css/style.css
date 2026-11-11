@@ -34,4 +34,75 @@ Vill du byta utseende ändrar du bara här, inte på 50 ställen längre ned. */
 	--max-width: 70rem; /* innehållets maxbredd */
 }
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	/* hoppar till ankarlänk, men med bestämt avstånd, uppåt eller nedåt */
+	scroll-padding-top: 5rem;
+}
+body {
+	font-family: var(--font-body);
+	font-size: 1.0625rem;
+	line-height: 1.6;
+	color: var(--color-ink);
+	background-color: var(--color-bg);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.1;
+	letter-spacing: -0.02rem;
+	margin: 0 0 var(--space-2);
+}
+h1 {
+	font-weight: 800;
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+h2 {
+	font-weight: 800;
+	font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+h3 {
+	font-weight: 700;
+	font-size: 1.35rem;
+}
+
+a {
+	color: var(--color-primary);
+}
+
+.focus-visible {
+	outline: 3px solid var(--color-primary);
+}
+.on-dark {
+	--focus: var(--color-accent);
+}
+
+.container {
+	width: min(100% - 2rem, var(--max-width));
+	margin-inline: auto;
+}
+.section {
+	padding-block: var(--space-5);
+}
+.section-tint {
+	background-color: var(--color-tint);
+}
+.section-intro {
+  color: var(--color-muted);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-4);
+}
 
